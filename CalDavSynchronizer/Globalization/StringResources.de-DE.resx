@@ -120,8 +120,8 @@
   <data name="- The category name must not contain commas." xml:space="preserve">
     <value>- Der Kategoriename darf kein Komma enthalten.</value>
   </data>
-  <data name="Email address:" xml:space="preserve">
-    <value>Email Adresse:</value>
+  <data name="Hitask Account Email address:" xml:space="preserve">
+    <value>Hitask Account Email Adresse:</value>
   </data>
   <data name="Use IANA timezone:" xml:space="preserve">
     <value>Verwende IANA Zeitzone:</value>
@@ -641,8 +641,8 @@ Deaktivieren dieser Einstellungen ist nur für Testzwecke sinnvoll und sollte no
   <data name="Network Settings" xml:space="preserve">
     <value>Netzwerk Einstellungen</value>
   </data>
-  <data name="Password:" xml:space="preserve">
-    <value>Passwort:</value>
+  <data name="Hitask Account Passwort:" xml:space="preserve">
+    <value>Hitask Account Passwort:</value>
   </data>
   <data name="Outlook Delta:" xml:space="preserve">
     <value>Outlook Delta:</value>
@@ -1012,8 +1012,8 @@ um die Entität im Synchronisationsreport zu identifizieren.</value>
   <data name="Executes specific steps of synchronization in chunks to save memory." xml:space="preserve">
     <value>Führe einzelne Schritte der Synchronisation in Blöcken aus um Hauptspeicher zu sparen.</value>
   </data>
-  <data name="Username:" xml:space="preserve">
-    <value>Username:</value>
+  <data name="Hitask Account User Name:" xml:space="preserve">
+    <value>Hitask Account User Name:</value>
   </data>
   <data name="Outlook wins" xml:space="preserve">
     <value>Outlook gewinnt</value>

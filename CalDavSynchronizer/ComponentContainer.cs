@@ -81,7 +81,7 @@ namespace CalDavSynchronizer
     private readonly Scheduler _scheduler;
     private readonly IOptionsDataAccess _optionsDataAccess;
     private readonly IGeneralOptionsDataAccess _generalOptionsDataAccess;
-    private readonly UpdateChecker _updateChecker;
+    //private readonly UpdateChecker _updateChecker;
     private readonly NameSpace _session;
     private readonly SyncObject _syncObject;
     private readonly string _applicationDataDirectory;
@@ -208,9 +208,9 @@ namespace CalDavSynchronizer
       EnsureCacheCompatibility (options);
 
       _availableVersionService = new AvailableVersionService();
-      _updateChecker = new UpdateChecker (_availableVersionService, () => _generalOptionsDataAccess.IgnoreUpdatesTilVersion);
-      _updateChecker.NewerVersionFound += UpdateChecker_NewerVersionFound;
-      _updateChecker.IsEnabled = generalOptions.ShouldCheckForNewerVersions;
+      //_updateChecker = new UpdateChecker (_availableVersionService, () => _generalOptionsDataAccess.IgnoreUpdatesTilVersion);
+      //_updateChecker.NewerVersionFound += UpdateChecker_NewerVersionFound;
+      //_updateChecker.IsEnabled = generalOptions.ShouldCheckForNewerVersions;
 
       _reportGarbageCollection = new ReportGarbageCollection (_synchronizationReportRepository, TimeSpan.FromDays (generalOptions.MaxReportAgeInDays));
 
@@ -588,7 +588,7 @@ namespace CalDavSynchronizer
         ConfigureServicePointManager(newOptions);
         ConfigureLogLevel(newOptions.EnableDebugLog);
 
-        _updateChecker.IsEnabled = newOptions.ShouldCheckForNewerVersions;
+        //_updateChecker.IsEnabled = newOptions.ShouldCheckForNewerVersions;
         _reportGarbageCollection.MaxAge = TimeSpan.FromDays(newOptions.MaxReportAgeInDays);
 
         _generalOptionsDataAccess.SaveOptions(newOptions);

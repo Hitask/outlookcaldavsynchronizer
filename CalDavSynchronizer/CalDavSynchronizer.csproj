@@ -1079,11 +1079,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>CalDavSynchronizer_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>99D12A4419EA17C4DB056A34FEDAFDC1A576A921</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>E1B204BA492919C1031D8B0EC88577DFC894A30B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
