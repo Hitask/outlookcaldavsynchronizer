@@ -76,7 +76,7 @@
             </TabControl.Resources>
             <TabItem Header="{g:Localize General Settings}">
                 <StackPanel>
-                    <CheckBox IsChecked="{Binding Options.ShouldCheckForNewerVersions}" Content="{g:Localize Automatically check for newer versions}"></CheckBox>
+                    <CheckBox IsChecked="{Binding Options.ShouldCheckForNewerVersions}" Content="{g:Localize Automatically check for newer versions}" Visibility="Collapsed"></CheckBox>
                     <CheckBox IsChecked="{Binding Options.CheckIfOnline}" Content="{g:Localize Check Internet connection before sync run}" ToolTip="{g:Localize Checks if a network interface is up\&#x0a;and try DNS query to dns.msftncsi.com first and if that fails try to download\&#x0a;http://www.msftncsi.com/ncsi.txt with the configured proxy settings.\&#x0a;Should avoid error reports when network is not available after\&#x0a;coming back from hibernate for example.}"></CheckBox>
                     <CheckBox IsChecked="{Binding Options.IncludeCustomMessageClasses}" Content="{g:Localize Include custom message classes in Outlook filter}" ToolTip="{g:Localize Use prefix filter to include also custom message_classes in filter for Outlook folders. \&#x0a;For better performance\, Windows Search Service shouldn\'t be deactivated if this option is enabled.}" ></CheckBox>
                     <CheckBox IsChecked="{Binding Options.QueryFoldersJustByGetTable}" Content="{g:Localize Use fast queries for Outlook folders}" ToolTip="{g:Localize Use fast GetTable queries when accessing Outlook folders.\&#x0a;Disable only if you get errors in GetVersions\, when disabled every item needs to be requested\&#x0a;which causes a performance penalty!}"></CheckBox>
