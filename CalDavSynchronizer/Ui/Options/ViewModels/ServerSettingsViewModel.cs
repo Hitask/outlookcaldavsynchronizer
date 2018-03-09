@@ -45,6 +45,7 @@ namespace CalDavSynchronizer.Ui.Options.ViewModels
       if (viewOptions == null) throw new ArgumentNullException(nameof(viewOptions));
 
       _model = model;
+      
       _optionTasks = optionTasks;
       ViewOptions = viewOptions;
 
@@ -79,13 +80,20 @@ namespace CalDavSynchronizer.Ui.Options.ViewModels
     public string CalenderUrl
     {
       get { return _model.CalenderUrl; }
-      set { _model.CalenderUrl = value; }
+      set
+      {
+        _model.CalenderUrl = "https://hitask.com/calendar/" + UserName + "/EVENTS/";        
+      }
     }
 
     public string UserName
     {
       get { return _model.UserName; }
-      set { _model.UserName = value; }
+      set
+      {
+        _model.UserName = value;
+        CalenderUrl = "";
+      }
     }
 
     public SecureString Password
@@ -114,7 +122,7 @@ namespace CalDavSynchronizer.Ui.Options.ViewModels
 
     public static ServerSettingsViewModel DesignInstance => new ServerSettingsViewModel(OptionsModel.DesignInstance, NullOptionTasks.Instance, OptionsCollectionViewModel.DesignViewOptions)
     {
-      CalenderUrl = "http://calendar.url",
+      //CalenderUrl = "http://calendar.url",
       EmailAddress = "bla@dot.com",
       Password = SecureStringUtility.ToSecureString("password"),
       UseAccountPassword = true,

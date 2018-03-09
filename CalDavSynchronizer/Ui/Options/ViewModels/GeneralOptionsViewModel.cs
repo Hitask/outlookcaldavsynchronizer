@@ -305,7 +305,7 @@ namespace CalDavSynchronizer.Ui.Options.ViewModels
         MaxReportAgeInDays = 111,
         MaxSucessiveWarnings = 222,
         QueryFoldersJustByGetTable = true,
-        ShouldCheckForNewerVersions = true,
+        ShouldCheckForNewerVersions = false,
         ShowProgressBar = true,
         ShowReportsWithErrorsImmediately = true,
         ShowReportsWithWarningsImmediately = true,
