@@ -641,7 +641,7 @@ Deaktivieren dieser Einstellungen ist nur für Testzwecke sinnvoll und sollte no
   <data name="Network Settings" xml:space="preserve">
     <value>Netzwerk Einstellungen</value>
   </data>
-  <data name="Hitask Account Passwort:" xml:space="preserve">
+  <data name="Hitask Account Password:" xml:space="preserve">
     <value>Hitask Account Passwort:</value>
   </data>
   <data name="Outlook Delta:" xml:space="preserve">
