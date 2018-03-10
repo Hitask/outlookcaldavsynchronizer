@@ -35,7 +35,7 @@
         <TextBlock Grid.Row="1" Grid.Column="0"><g:Localize>Hitask Account User Name:</g:Localize></TextBlock>
         <TextBox Text="{Binding UserName}" MinWidth="200"  Grid.Row="1" Grid.Column="2" />
 
-        <TextBlock Grid.Row="2" Grid.Column="0"><g:Localize>Hitask Account Passwort:</g:Localize></TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0"><g:Localize>Hitask Account Password:</g:Localize></TextBlock>
         <PasswordBox x:Name="_passwordBox"
                      PasswordChar="*" 
                      IsEnabled="{Binding IsChecked, ElementName=UseAccountPasswordCheckBox, Converter={StaticResource BooleanNotConverter}}"
