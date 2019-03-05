@@ -45,6 +45,7 @@ namespace CalDavSynchronizer.Ui
             this.label2 = new System.Windows.Forms.Label();
             this._logoPictureBox = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.BuildDatelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._logoPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -196,6 +197,14 @@ namespace CalDavSynchronizer.Ui
             this.label3.TabIndex = 13;
             this.label3.Text = "Based On Open Source Outlook CalDav Synchronizer Project";
             // 
+            // BuildDatelabel
+            // 
+            this.BuildDatelabel.AutoSize = true;
+            this.BuildDatelabel.Location = new System.Drawing.Point(9, 94);
+            this.BuildDatelabel.Name = "BuildDatelabel";
+            this.BuildDatelabel.Size = new System.Drawing.Size(0, 13);
+            this.BuildDatelabel.TabIndex = 14;
+            // 
             // AboutForm
             // 
             this.AcceptButton = this.btnOK;
@@ -204,6 +213,7 @@ namespace CalDavSynchronizer.Ui
             this.BackColor = System.Drawing.SystemColors.Window;
             this.CancelButton = this.btnOK;
             this.ClientSize = new System.Drawing.Size(459, 588);
+            this.Controls.Add(this.BuildDatelabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this._logoPictureBox);
             this.Controls.Add(this.label2);
@@ -247,5 +257,6 @@ namespace CalDavSynchronizer.Ui
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.PictureBox _logoPictureBox;
     private System.Windows.Forms.Label label3;
-  }
+        private System.Windows.Forms.Label BuildDatelabel;
+    }
 }

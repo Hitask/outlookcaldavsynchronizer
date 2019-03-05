@@ -31,30 +31,34 @@ namespace CalDavSynchronizer.Ui
 
     private readonly Action _checkForUpdatesActionAsync;
 
-    public AboutForm (Action checkForUpdatesActionAsync)
-    {
-      _checkForUpdatesActionAsync = checkForUpdatesActionAsync;
-      InitializeComponent();
+      public AboutForm(Action checkForUpdatesActionAsync)
+      {
+          _checkForUpdatesActionAsync = checkForUpdatesActionAsync;
+          InitializeComponent();
 
-      btnOK.Text = Strings.Get($"OK");
-      label1.Text = Strings.Get($"Team:");
-      _linkLabelPayPal.Text = Strings.Get($"Donate with PayPal");
-      _linkLabelHelp.Text = Strings.Get($"Documentation and Tutorials");
-      _checkForUpdatesButton.Text = Strings.Get($"Check for Updates");
-      Text = Strings.Get($"About");
+          btnOK.Text = Strings.Get($"OK");
+          label1.Text = Strings.Get($"Team:");
+          _linkLabelPayPal.Text = Strings.Get($"Donate with PayPal");
+          _linkLabelHelp.Text = Strings.Get($"Documentation and Tutorials");
+          _checkForUpdatesButton.Text = Strings.Get($"Check for Updates");
+          Text = Strings.Get($"About");
 
-      _versionLabel.Text = Strings.Get($"Version: {Assembly.GetExecutingAssembly().GetName().Version}");
+          var assembly = Assembly.GetExecutingAssembly();
+          _versionLabel.Text = Strings.Get($"Version: {assembly.GetName().Version}");
 
-      this._linkLabelProject.Text = WebResourceUrls.ProjectHomeSite.ToString();
+          var builDate = assembly.GetBuildDateTime();
+          BuildDatelabel.Text = $"Build Date: {builDate:yyyy-MMM-dd}";
 
-      _linkLabelTeamMembers.LinkClicked += _linkLabelTeamMembers_LinkClicked;
-      _linkLabelTeamMembers.Text = string.Empty;
-      AddTeamMember ("Alexander Nimmervoll", "http://sourceforge.net/u/nimm/profile/");
-      AddTeamMember ("Gerhard Zehetbauer", "http://sourceforge.net/u/nertsch/profile/");
-      _logoPictureBox.Image = Properties.Resources.ApplicationLogoLarge;
-    }
+          this._linkLabelProject.Text = WebResourceUrls.ProjectHomeSite.ToString();
 
-    public sealed override string Text
+          _linkLabelTeamMembers.LinkClicked += _linkLabelTeamMembers_LinkClicked;
+          _linkLabelTeamMembers.Text = string.Empty;
+          AddTeamMember("Alexander Nimmervoll", "http://sourceforge.net/u/nimm/profile/");
+          AddTeamMember("Gerhard Zehetbauer", "http://sourceforge.net/u/nertsch/profile/");
+          _logoPictureBox.Image = Properties.Resources.ApplicationLogoLarge;
+      }
+
+      public sealed override string Text
     {
       get => base.Text;
       set => base.Text = value;
