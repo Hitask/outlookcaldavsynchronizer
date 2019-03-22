@@ -5107,7 +5107,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_B9464A368EDA4FBF813D9C26C4B34467"
             {
-            "DefaultLocation" = "8:[MYDEFAULTINSTALLPATH]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"

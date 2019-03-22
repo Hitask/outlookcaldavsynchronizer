@@ -76,7 +76,6 @@ namespace CalDavSynchronizer.Ui
             this._licenseTextBox.Size = new System.Drawing.Size(435, 279);
             this._licenseTextBox.TabIndex = 1;
             this._licenseTextBox.Text = resources.GetString("_licenseTextBox.Text");
-            this._licenseTextBox.WordWrap = false;
             // 
             // _captionLabel
             // 
